@@ -15,6 +15,11 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+<div class="field">
+
+<%= collection_select(:idea, :category_id, Category.all, :id, :name, prompt: true) %>
+  
+</div>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
@@ -27,4 +32,7 @@
   
   <%= f.submit 'dodaj pomysl', :class => "btn btn-danger" %>
   </div>
+  
+
+
 <% end %>

@@ -5,6 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th>Category name </th>
       <th>Picture</th>
       <th colspan="3"></th>
     </tr>
@@ -15,6 +16,7 @@
       <tr>
         <td><%= idea.name %></td>
         <td><%= idea.description %></td>
+        <td><%= idea.category.name if idea.category.present? %>
         <td><%= image_tag(idea.picture_url, :width => 50, :height => 50) if idea.picture.present? %></td>
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
@@ -27,3 +29,4 @@
 <br>
 
 <%= link_to 'New Idea', new_idea_path %>
+

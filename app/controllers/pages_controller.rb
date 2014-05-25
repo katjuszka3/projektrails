@@ -2,4 +2,5 @@ class PagesController < ApplicationController
   def info
     @ideas = Idea.all
   end
-end
+  def info
+  	@kotki
